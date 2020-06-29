@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connection Test </title>
+        <!--<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+        <script src="/webjars/jquery/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+        <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+        <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+        <script src="/app.js"></script>
+    </head>
+
+    <body>
+        <div class="row header">
+            <div class="col-md-12 d-flex w-100 p-0 m-0">
+                <div class="col-md-1 biru pt-auto pb-auto align-items-center">
+                    <img src="./img/logo.svg" alt="Avatar"  style="margin: 20% 0 0 10%; max-width: 100%;">
+                </div>
+                <div class="col-md-7 biru mt-auto mb-auto">
+                    <br/>
+                    <h3>ROBOCHALLENGE 2020</h3>
+                    <h4>POLBAN ROBOTICS UNIT</h4>
+                    <br/>
+                </div>
+
+                <div class="col-md-1 oren pt-4">
+                    <img src="./img/engineer.png" alt="Avatar" class="rounded-circle ava d-block" style="max-width: 100%">
+                </div>
+                <div class="col-md-3 oren pt-1">
+                    <br/>
+                    <label><b>Jajang su jajang</b></label><br/>
+                    <label><b>D5 - Jeruk Manggis</b></label>
+                </div>
+            </div>
+        </div>
+        <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+            enabled. Please enable
+            Javascript and reload this page!</h2></noscript>
+
+        <div class="container-fluid pt-1 deck">
+            <div class="card-deck mt-1"> 
+                <div class="card panel mb-3" >
+                    <div class="card-header panel-header"><h5>CREDENTIAL</h5></div>
+                    <div class="card-body panel-connection">
+                        <h4 class="card-title">XXXXXXXX</h4>
+                        <br/>
+                        <p class="card-text">Status : Phone Connected</p>
+                    </div>
+                </div>
+
+                <div class="card panel mb-3" >
+                    <div class="card-header panel-header"><h5>Server Status</h5></div>
+                    <div class="card-body panel-ping">
+                        img ping
+                        <p class="card-text">Up and Running</p>
+                    </div>
+                </div>
+
+                <div class="card panel mb-3" >
+                    <div class="card-header panel-header"><h5>TASK</h5></div>
+                    <div class="card-body panel-info">
+                        <h5 class="card-title">Your TODO List</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8"> 
+                    <div class="card panel mb-3" >
+                        <div class="card-header panel-header">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>COMMUNICATION PANEL</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <!--<label for="connect"></label>-->
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                                                <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body panel-connection">
+                            <div class="row">
+                                <div class="col-md-12 mx-auto">
+                                    <table id="conversation" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Greetings</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="greetings">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"> 
+                    <div class="card panel mb-3" >
+                        <div class="card-header panel-header"><h5>NEWS</h5></div>
+                        <div class="card-body panel-info">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
